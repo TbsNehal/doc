@@ -1,1 +1,7017 @@
-
+{
+"openapi": "3.0.1",
+"info": {
+"title": "TimeClockWizard API V1",
+"version": "v1"
+},
+"servers": [
+{
+"url": "/authapi"
+}
+],
+"paths": {
+"/api/Client/GetPlanDetails": {
+"post": {
+"tags": [
+"Client"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/PlanModel"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/PlanModel"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/PlanModel"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Client/SignUp": {
+"post": {
+"tags": [
+"Client"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/SignupModel"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/SignupModel"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/SignupModel"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Clock/ClockIn": {
+"post": {
+"tags": [
+"Clock"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/GetClockModel"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/GetClockModel"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/GetClockModel"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Clock/ClockOut": {
+"post": {
+"tags": [
+"Clock"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/ClockOutModel"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/ClockOutModel"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/ClockOutModel"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Clock/BreakIn": {
+"post": {
+"tags": [
+"Clock"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/BreakInOutModel"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/BreakInOutModel"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/BreakInOutModel"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Clock/BreakOut": {
+"post": {
+"tags": [
+"Clock"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/BreakInOutModel"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/BreakInOutModel"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/BreakInOutModel"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Clock/InsertImage": {
+"post": {
+"tags": [
+"Clock"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/InsertImage"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/InsertImage"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/InsertImage"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Clock/ClockStatus": {
+"post": {
+"tags": [
+"Clock"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/BaseModel"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/BaseModel"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/BaseModel"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Clock/QuickClockIn": {
+"post": {
+"tags": [
+"Clock"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/QuickClockIn"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/QuickClockIn"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/QuickClockIn"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Dashboard/GetDashboard": {
+"post": {
+"tags": [
+"Dashboard"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/GetDashboardModel"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/GetDashboardModel"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/GetDashboardModel"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Dashboard/GetAllPermissionList": {
+"post": {
+"tags": [
+"Dashboard"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/GetDashboardModel"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/GetDashboardModel"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/GetDashboardModel"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Dashboard/GetAllDropDownData": {
+"post": {
+"tags": [
+"Dashboard"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/GetDashboardModel"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/GetDashboardModel"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/GetDashboardModel"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Dashboard/GetTimeSheetRequestData": {
+"post": {
+"tags": [
+"Dashboard"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/TimeSheetRequest"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/TimeSheetRequest"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/TimeSheetRequest"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Dashboard/ApproveTimeSheetRequest": {
+"post": {
+"tags": [
+"Dashboard"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/ApproveTimeSheetRequest"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/ApproveTimeSheetRequest"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/ApproveTimeSheetRequest"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Dashboard/DenyTimeSheetRequest": {
+"post": {
+"tags": [
+"Dashboard"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/DenyTimeSheetRequest"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/DenyTimeSheetRequest"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/DenyTimeSheetRequest"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Dashboard/GetAbsenceRequestData": {
+"post": {
+"tags": [
+"Dashboard"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/GetAbsenceRequest"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/GetAbsenceRequest"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/GetAbsenceRequest"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Dashboard/ApproveAbsenceRequest": {
+"post": {
+"tags": [
+"Dashboard"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/ApproveAbsenceRequest"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/ApproveAbsenceRequest"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/ApproveAbsenceRequest"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Dashboard/DenyAbsenceRequest": {
+"post": {
+"tags": [
+"Dashboard"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/DenyAbsenceRequest"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/DenyAbsenceRequest"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/DenyAbsenceRequest"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Dashboard/GetUserExpenseRequest": {
+"post": {
+"tags": [
+"Dashboard"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/UserExpenseRequest"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/UserExpenseRequest"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/UserExpenseRequest"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Dashboard/VerifyUnVerifyReimbursement": {
+"post": {
+"tags": [
+"Dashboard"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/VerifyUnVerifyReimbursement"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/VerifyUnVerifyReimbursement"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/VerifyUnVerifyReimbursement"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Dashboard/GetTimeSheetNote": {
+"post": {
+"tags": [
+"Dashboard"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/DenyTimeSheetRequest"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/DenyTimeSheetRequest"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/DenyTimeSheetRequest"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Dashboard/EditTimeSheetRequestData": {
+"post": {
+"tags": [
+"Dashboard"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/DenyTimeSheetRequest"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/DenyTimeSheetRequest"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/DenyTimeSheetRequest"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Dashboard/DeleteTimeSheetRequest": {
+"post": {
+"tags": [
+"Dashboard"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/DenyTimeSheetRequest"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/DenyTimeSheetRequest"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/DenyTimeSheetRequest"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Dashboard/DeleteAbsenceRequest": {
+"post": {
+"tags": [
+"Dashboard"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/DenyAbsenceRequest"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/DenyAbsenceRequest"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/DenyAbsenceRequest"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Employee/GetList": {
+"post": {
+"tags": [
+"Employee"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/GetEmployeeList"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/GetEmployeeList"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/GetEmployeeList"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Feedback/GetFeedbackoptionList": {
+"post": {
+"tags": [
+"Feedback"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/BaseModel"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/BaseModel"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/BaseModel"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Feedback/InsertFeedBack": {
+"post": {
+"tags": [
+"Feedback"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/InsertFeedBack"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/InsertFeedBack"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/InsertFeedBack"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/GPS/GetList": {
+"post": {
+"tags": [
+"GPS"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/BaseModel"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/BaseModel"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/BaseModel"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Location/GetLocation": {
+"post": {
+"tags": [
+"Location"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/GetLocation"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/GetLocation"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/GetLocation"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Login/Login": {
+"post": {
+"tags": [
+"Login"
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/GetLoginModel"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/GetLoginModel"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/GetLoginModel"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success",
+"content": {
+"text/plain": {
+"schema": {
+"$ref": "#/components/schemas/LoginModel"
+}
+},
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/LoginModel"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/LoginModel"
+}
+}
+}
+}
+}
+}
+},
+"/api/Login/Logout": {
+"post": {
+"tags": [
+"Login"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/Logout"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/Logout"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/Logout"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Login/GetIp": {
+"post": {
+"tags": [
+"Login"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Login/RefreshToken": {
+"post": {
+"tags": [
+"Login"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/BaseModel"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/BaseModel"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/BaseModel"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Login/SendErrorMessage": {
+"post": {
+"tags": [
+"Login"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/SendErrorMessage"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/SendErrorMessage"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/SendErrorMessage"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Message/GetEmployeeNotification": {
+"post": {
+"tags": [
+"Message"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/BaseModel"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/BaseModel"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/BaseModel"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Message/GetList": {
+"post": {
+"tags": [
+"Message"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/GetListModel"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/GetListModel"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/GetListModel"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Message/GetDetail": {
+"post": {
+"tags": [
+"Message"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/GetDetailModel"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/GetDetailModel"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/GetDetailModel"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Message/Insert": {
+"post": {
+"tags": [
+"Message"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/InsertMessageModel"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/InsertMessageModel"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/InsertMessageModel"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Notification/GetDetailList": {
+"post": {
+"tags": [
+"Notification"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/GetNotificationDetail"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/GetNotificationDetail"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/GetNotificationDetail"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Payroll/GetList": {
+"post": {
+"tags": [
+"Payroll"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/GetPayroll"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/GetPayroll"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/GetPayroll"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Payroll/PayrollDate": {
+"post": {
+"tags": [
+"Payroll"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/BaseModel"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/BaseModel"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/BaseModel"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Payroll/PayrollMail": {
+"post": {
+"tags": [
+"Payroll"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/PayrollMail"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/PayrollMail"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/PayrollMail"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Position/GetPosition": {
+"post": {
+"tags": [
+"Position"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/GetPosition"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/GetPosition"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/GetPosition"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Reimbursement/Insert": {
+"post": {
+"tags": [
+"Reimbursement"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/GetReimbursementModel"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/GetReimbursementModel"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/GetReimbursementModel"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Reimbursement/ExpenseType": {
+"post": {
+"tags": [
+"Reimbursement"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/GetExpenseType"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/GetExpenseType"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/GetExpenseType"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Reimbursement/GetList": {
+"post": {
+"tags": [
+"Reimbursement"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/GetReimbursementListModel"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/GetReimbursementListModel"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/GetReimbursementListModel"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Schedule/GetListDay": {
+"post": {
+"tags": [
+"Schedule"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/GetSchedule"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/GetSchedule"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/GetSchedule"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Schedule/GetListWeek": {
+"post": {
+"tags": [
+"Schedule"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/GetWeekSchedule"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/GetWeekSchedule"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/GetWeekSchedule"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Schedule/GetListMonth": {
+"post": {
+"tags": [
+"Schedule"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/GetMonthSchedule"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/GetMonthSchedule"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/GetMonthSchedule"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Schedule/InsertEditSchedule": {
+"post": {
+"tags": [
+"Schedule"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/GetInsertEditSchedule"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/GetInsertEditSchedule"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/GetInsertEditSchedule"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Schedule/SheduleDelete": {
+"post": {
+"tags": [
+"Schedule"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/GetDeleteSchedule"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/GetDeleteSchedule"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/GetDeleteSchedule"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Schedule/SheduleAccept": {
+"post": {
+"tags": [
+"Schedule"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/GetDeleteSchedule"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/GetDeleteSchedule"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/GetDeleteSchedule"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Schedule/SheduleDenie": {
+"post": {
+"tags": [
+"Schedule"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/GetDeleteSchedule"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/GetDeleteSchedule"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/GetDeleteSchedule"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Schedule/Mobile_GetSwitchSchedule_Other": {
+"post": {
+"tags": [
+"Schedule"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/Mobile_GetSwitchSchedule_Other"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/Mobile_GetSwitchSchedule_Other"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/Mobile_GetSwitchSchedule_Other"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Schedule/Mobile_GetSwitchSchedule_From": {
+"post": {
+"tags": [
+"Schedule"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/Mobile_GetSwitchSchedule_From"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/Mobile_GetSwitchSchedule_From"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/Mobile_GetSwitchSchedule_From"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Schedule/Mobile_GetSwitchSchedule_To": {
+"post": {
+"tags": [
+"Schedule"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/Mobile_GetSwitchSchedule_From"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/Mobile_GetSwitchSchedule_From"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/Mobile_GetSwitchSchedule_From"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Schedule/Mobile_SheduleDelete": {
+"post": {
+"tags": [
+"Schedule"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/GetScheduleModel"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/GetScheduleModel"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/GetScheduleModel"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Switch/InsertSwitchSchedule": {
+"post": {
+"tags": [
+"Switch"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/GetSwitchModel"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/GetSwitchModel"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/GetSwitchModel"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Task/GetTaskList": {
+"post": {
+"tags": [
+"Task"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/GetTaskList"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/GetTaskList"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/GetTaskList"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Task/GetTaskDetails": {
+"post": {
+"tags": [
+"Task"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/GetTaskDetail"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/GetTaskDetail"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/GetTaskDetail"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Task/GetUserList": {
+"post": {
+"tags": [
+"Task"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/GetUserList"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/GetUserList"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/GetUserList"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Task/GetAssignEmployeeOfTask": {
+"post": {
+"tags": [
+"Task"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/GetAssignEmployeeOfTask"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/GetAssignEmployeeOfTask"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/GetAssignEmployeeOfTask"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Task/GetTaskNoteDetails": {
+"post": {
+"tags": [
+"Task"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/GetNoteDetail"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/GetNoteDetail"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/GetNoteDetail"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Task/DeleteTask": {
+"post": {
+"tags": [
+"Task"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/DeleteTask"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/DeleteTask"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/DeleteTask"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Task/UpdateTaskEmployeeAssignment": {
+"post": {
+"tags": [
+"Task"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/UpdateTaskEmployeeAssignment"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/UpdateTaskEmployeeAssignment"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/UpdateTaskEmployeeAssignment"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Task/AssignNewEmployees": {
+"post": {
+"tags": [
+"Task"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/AssignNewEmployees"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/AssignNewEmployees"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/AssignNewEmployees"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Task/RemoveEmployeeFromTask": {
+"post": {
+"tags": [
+"Task"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/RemoveEmployeeFromTask"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/RemoveEmployeeFromTask"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/RemoveEmployeeFromTask"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/Task/InsertUpdateTask": {
+"post": {
+"tags": [
+"Task"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/InsertUpdateTask"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/InsertUpdateTask"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/InsertUpdateTask"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/TimeSheet/GetList": {
+"post": {
+"tags": [
+"TimeSheet"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/Mobile_GetTimeSheetForEmployee"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/Mobile_GetTimeSheetForEmployee"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/Mobile_GetTimeSheetForEmployee"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/TimeSheet/Insert": {
+"post": {
+"tags": [
+"TimeSheet"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/InsertTimeSheet"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/InsertTimeSheet"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/InsertTimeSheet"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+},
+"/api/TimeSheet/Updatelonglat": {
+"post": {
+"tags": [
+"TimeSheet"
+],
+"parameters": [
+{
+"name": "Token",
+"in": "header",
+"schema": {
+"type": "String"
+}
+},
+{
+"name": "TokenIssueDate",
+"in": "header",
+"schema": {
+"type": "String"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"$ref": "#/components/schemas/Updatelonglat"
+}
+},
+"text/json": {
+"schema": {
+"$ref": "#/components/schemas/Updatelonglat"
+}
+},
+"application/*+json": {
+"schema": {
+"$ref": "#/components/schemas/Updatelonglat"
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": "Success"
+}
+}
+}
+}
+},
+"components": {
+"schemas": {
+"APITokenModel": {
+"type": "object",
+"properties": {
+"Token": {
+"type": "string",
+"nullable": true
+},
+"TokenExpiry": {
+"type": "integer",
+"format": "int32"
+},
+"TokenIssueDate": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"ApproveAbsenceRequest": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+},
+"Employee_ID": {
+"type": "integer",
+"format": "int64"
+},
+"Absence_Id": {
+"type": "integer",
+"format": "int64"
+},
+"Note": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"ApproveTimeSheetRequest": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+},
+"Request_ID": {
+"type": "integer",
+"format": "int64"
+},
+"Location": {
+"type": "string",
+"nullable": true
+},
+"IsSaved": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"AssignNewEmployees": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+},
+"TaskId": {
+"type": "integer",
+"format": "int64"
+},
+"TaskStatus": {
+"type": "integer",
+"format": "int32"
+},
+"EmployeeId": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"BaseModel": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"BreakInOutModel": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+},
+"reqMobile": {
+"type": "boolean"
+},
+"strLocation": {
+"type": "string",
+"nullable": true
+},
+"cookies": {
+"type": "string",
+"nullable": true
+},
+"latitude": {
+"type": "number",
+"format": "double"
+},
+"longitude": {
+"type": "number",
+"format": "double"
+},
+"reqestMobileBrowser": {
+"type": "boolean"
+},
+"ReqestSource": {
+"type": "integer",
+"format": "int32"
+},
+"CreatedBy": {
+"type": "integer",
+"format": "int32"
+},
+"customerID": {
+"type": "integer",
+"format": "int64"
+},
+"MacAddress": {
+"type": "string",
+"nullable": true
+},
+"AppVersion": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"CheckLoginDashbordDetailsModel": {
+"type": "object",
+"properties": {
+"UserStatusId": {
+"type": "integer",
+"format": "int64"
+},
+"CurrentutcDateTime": {
+"type": "string",
+"format": "date-time"
+},
+"UserStatusText": {
+"type": "string",
+"nullable": true
+},
+"UTCTime": {
+"type": "string",
+"format": "date-time"
+},
+"TimeDiff": {
+"type": "string",
+"nullable": true
+},
+"Switch": {
+"type": "integer",
+"format": "int32"
+},
+"TimeSheet": {
+"type": "integer",
+"format": "int64"
+},
+"Notifications": {
+"type": "integer",
+"format": "int64"
+},
+"ClockInOut": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"CheckLoginUserDetailsModel": {
+"type": "object",
+"properties": {
+"Client_ID": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"User_ID": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Manager": {
+"type": "boolean"
+},
+"Password": {
+"type": "string",
+"nullable": true
+},
+"FirstName": {
+"type": "string",
+"nullable": true
+},
+"LastName": {
+"type": "string",
+"nullable": true
+},
+"ClockPointRestriction": {
+"type": "boolean"
+},
+"IsAutomaticBreak": {
+"type": "boolean"
+},
+"FullName": {
+"type": "string",
+"nullable": true
+},
+"avtar": {
+"type": "string",
+"nullable": true
+},
+"AllowLocationWiseClockin": {
+"type": "integer",
+"format": "int32"
+},
+"AllowPhotoWhenClockin": {
+"type": "integer",
+"format": "int32"
+},
+"AllowNote": {
+"type": "integer",
+"format": "int32"
+},
+"AllowJobWiseClockin": {
+"type": "integer",
+"format": "int32"
+},
+"Client_Version": {
+"type": "number",
+"format": "double"
+},
+"PaymentStatus": {
+"type": "integer",
+"format": "int32"
+},
+"PlanID": {
+"type": "integer",
+"format": "int32"
+},
+"ScreenShotImagePath": {
+"type": "string",
+"nullable": true
+},
+"aws_accessKey": {
+"type": "string",
+"nullable": true
+},
+"aws_secretAccessKey": {
+"type": "string",
+"nullable": true
+},
+"aws_serviceUrl": {
+"type": "string",
+"nullable": true
+},
+"aws_Path": {
+"type": "string",
+"nullable": true
+},
+"AllowImageTracking": {
+"type": "boolean"
+},
+"AllowBlurImage": {
+"type": "boolean"
+},
+"ImageFrequency": {
+"type": "integer",
+"format": "int32"
+},
+"IdleTime": {
+"type": "integer",
+"format": "int32"
+},
+"AllowTaskWiseClockin": {
+"type": "integer",
+"format": "int32"
+},
+"IsScreenCapture": {
+"type": "boolean"
+},
+"aws_PathNew": {
+"type": "string",
+"nullable": true
+},
+"BucketACL": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"ClockOutModel": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"reqMobile": {
+"type": "boolean"
+},
+"strLocation": {
+"type": "string",
+"nullable": true
+},
+"cookies": {
+"type": "string",
+"nullable": true
+},
+"latitude": {
+"type": "number",
+"format": "double"
+},
+"longitude": {
+"type": "number",
+"format": "double"
+},
+"OutImage": {
+"type": "string",
+"nullable": true
+},
+"Note": {
+"type": "string",
+"nullable": true
+},
+"reqestMobileBrowser": {
+"type": "boolean"
+},
+"ReqestSource": {
+"type": "integer",
+"format": "int32"
+},
+"CreatedBy": {
+"type": "integer",
+"format": "int32"
+},
+"qBOServiceitemID": {
+"type": "integer",
+"format": "int64"
+},
+"qBOClassesID": {
+"type": "integer",
+"format": "int64"
+},
+"qBORequirebillable": {
+"type": "boolean"
+},
+"IP": {
+"type": "string",
+"nullable": true
+},
+"MacAddress": {
+"type": "string",
+"nullable": true
+},
+"AppVersion": {
+"type": "string",
+"nullable": true
+},
+"TaskId": {
+"type": "integer",
+"format": "int64"
+}
+},
+"additionalProperties": false
+},
+"DeleteTask": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+},
+"TaskId": {
+"type": "integer",
+"format": "int32"
+},
+"IsConfirm": {
+"type": "integer",
+"format": "int32"
+},
+"IsDelete": {
+"type": "integer",
+"format": "int32"
+},
+"AppVersion": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"DenyAbsenceRequest": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+},
+"Absence_Id": {
+"type": "integer",
+"format": "int32"
+},
+"Employee_Id": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"DenyTimeSheetRequest": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+},
+"Request_ID": {
+"type": "integer",
+"format": "int64"
+},
+"DenyReason": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"GetAbsenceRequest": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+},
+"StartDate": {
+"type": "string",
+"format": "date-time"
+},
+"EndDate": {
+"type": "string",
+"format": "date-time"
+},
+"EmployeeId": {
+"type": "integer",
+"format": "int64"
+},
+"PageStart": {
+"type": "integer",
+"format": "int32"
+},
+"DisplayLength": {
+"type": "integer",
+"format": "int32"
+},
+"EmployeeIds": {
+"type": "string",
+"nullable": true
+},
+"IsApproved": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"GetAssignEmployeeOfTask": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+},
+"TaskId": {
+"type": "integer",
+"format": "int32"
+},
+"TaskStatus": {
+"type": "integer",
+"format": "int32"
+},
+"SearchEmployeeId": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"GetClockModel": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+},
+"reqMobile": {
+"type": "boolean"
+},
+"strLocation": {
+"type": "string",
+"nullable": true
+},
+"cookies": {
+"type": "string",
+"nullable": true
+},
+"latitude": {
+"type": "number",
+"format": "double"
+},
+"longitude": {
+"type": "number",
+"format": "double"
+},
+"Office_ID": {
+"type": "integer",
+"format": "int64"
+},
+"InImage": {
+"type": "string",
+"nullable": true
+},
+"Note": {
+"type": "string",
+"nullable": true
+},
+"Position_ID": {
+"type": "integer",
+"format": "int64"
+},
+"reqestMobileBrowser": {
+"type": "boolean"
+},
+"ReqestSource": {
+"type": "integer",
+"format": "int32"
+},
+"CreatedBy": {
+"type": "integer",
+"format": "int32"
+},
+"customerID": {
+"type": "integer",
+"format": "int64"
+},
+"MacAddress": {
+"type": "string",
+"nullable": true
+},
+"AppVersion": {
+"type": "string",
+"nullable": true
+},
+"TaskId": {
+"type": "integer",
+"format": "int64"
+}
+},
+"additionalProperties": false
+},
+"GetDashboardModel": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+},
+"AppVersion": {
+"type": "string",
+"nullable": true
+},
+"PlatformName": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"GetDeleteSchedule": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+},
+"EmployeeId": {
+"type": "integer",
+"format": "int64"
+},
+"ReplacedEmployeeId": {
+"type": "integer",
+"format": "int64"
+},
+"ShiftId": {
+"type": "integer",
+"format": "int64"
+},
+"Status": {
+"type": "integer",
+"format": "int32"
+},
+"ChangeInServiceID": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"GetDetailModel": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+},
+"GroupID": {
+"type": "integer",
+"format": "int64"
+}
+},
+"additionalProperties": false
+},
+"GetEmployeeList": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+},
+"employeeID": {
+"type": "integer",
+"format": "int32"
+},
+"isSelectAll": {
+"type": "boolean"
+},
+"isAllEmployee": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"GetExpenseType": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+},
+"CultureLanguage": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"GetInsertEditSchedule": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+},
+"EmployeeId": {
+"type": "string",
+"nullable": true
+},
+"ShiftId": {
+"type": "integer",
+"format": "int64"
+},
+"Day": {
+"type": "string",
+"nullable": true
+},
+"StartTime": {
+"type": "string",
+"format": "date-time"
+},
+"EndTime": {
+"type": "string",
+"format": "date-time"
+},
+"Office": {
+"type": "integer",
+"format": "int64"
+},
+"Position": {
+"type": "integer",
+"format": "int64"
+},
+"Comment": {
+"type": "string",
+"nullable": true
+},
+"Price": {
+"type": "number",
+"format": "double"
+},
+"IsOvernight": {
+"type": "boolean"
+},
+"Mode": {
+"type": "integer",
+"format": "int32"
+},
+"RepeatFor": {
+"type": "integer",
+"format": "int32"
+},
+"RepeatOn": {
+"type": "string",
+"nullable": true
+},
+"ColorCode": {
+"type": "string",
+"nullable": true
+},
+"IsConform": {
+"type": "integer",
+"format": "int32"
+},
+"ShiftIDs": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"GetListModel": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+},
+"PageIndex": {
+"type": "integer",
+"format": "int32"
+},
+"PageSize": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"GetLocation": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32"
+},
+"ClientId": {
+"type": "integer",
+"format": "int64"
+},
+"UserId": {
+"type": "integer",
+"format": "int64"
+},
+"OfficeID": {
+"type": "integer",
+"format": "int64"
+},
+"Version": {
+"type": "number",
+"format": "double"
+}
+},
+"additionalProperties": false
+},
+"GetLoginModel": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+},
+"Subdomain": {
+"type": "string",
+"nullable": true
+},
+"Username": {
+"type": "string",
+"nullable": true
+},
+"Password": {
+"type": "string",
+"nullable": true
+},
+"PartnerId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Type": {
+"type": "string",
+"nullable": true
+},
+"LogType": {
+"type": "string",
+"nullable": true
+},
+"AppVersion": {
+"type": "string",
+"nullable": true
+},
+"PlatformName": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"GetMonthSchedule": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+},
+"Month": {
+"type": "integer",
+"format": "int32"
+},
+"Year": {
+"type": "integer",
+"format": "int32"
+},
+"EmployeeId": {
+"type": "integer",
+"format": "int64"
+}
+},
+"additionalProperties": false
+},
+"GetNoteDetail": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+},
+"TaskId": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"GetNotificationDetail": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+},
+"PushNotificationTypeID": {
+"type": "integer",
+"format": "int64"
+},
+"PageIndex": {
+"type": "integer",
+"format": "int32"
+},
+"PageSize": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"GetPayroll": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+},
+"PayrollID": {
+"type": "integer",
+"format": "int64"
+},
+"PageIndex": {
+"type": "integer",
+"format": "int32"
+},
+"PageSize": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"GetPosition": {
+"type": "object",
+"properties": {
+"ClientID": {
+"type": "integer",
+"format": "int32"
+},
+"UserId": {
+"type": "integer",
+"format": "int32"
+},
+"PositionId": {
+"type": "integer",
+"format": "int64"
+},
+"Version": {
+"type": "number",
+"format": "double"
+}
+},
+"additionalProperties": false
+},
+"GetReimbursementListModel": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+},
+"EmployeeID": {
+"type": "string",
+"nullable": true
+},
+"ExpenseTypeID": {
+"type": "integer",
+"format": "int64"
+},
+"StartDate": {
+"type": "string",
+"format": "date-time"
+},
+"EndDate": {
+"type": "string",
+"format": "date-time"
+},
+"PageIndex": {
+"type": "integer",
+"format": "int32"
+},
+"PageSize": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"GetReimbursementModel": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+},
+"ExpenseTypeId": {
+"type": "integer",
+"format": "int64"
+},
+"ExpenseDate": {
+"type": "string",
+"format": "date-time"
+},
+"Expense": {
+"type": "number",
+"format": "double"
+},
+"Comment": {
+"type": "string",
+"nullable": true
+},
+"UploadReceipt": {
+"type": "string",
+"nullable": true
+},
+"VerifiedBy": {
+"type": "integer",
+"format": "int64"
+}
+},
+"additionalProperties": false
+},
+"GetSchedule": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+},
+"SearchDate": {
+"type": "string",
+"format": "date-time"
+},
+"EmployeeId": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"GetScheduleModel": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+},
+"ShiftId": {
+"type": "integer",
+"format": "int64"
+}
+},
+"additionalProperties": false
+},
+"GetSwitchModel": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+},
+"EmployeeID": {
+"type": "integer",
+"format": "int64"
+},
+"ReplacedEmployeeID": {
+"type": "integer",
+"format": "int64"
+},
+"ShiftID": {
+"type": "integer",
+"format": "int32"
+},
+"Notes": {
+"type": "string",
+"nullable": true
+},
+"Status": {
+"type": "integer",
+"format": "int32"
+},
+"ChangeInServiceID": {
+"type": "number",
+"format": "double"
+}
+},
+"additionalProperties": false
+},
+"GetTaskDetail": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+},
+"TaskId": {
+"type": "integer",
+"format": "int32"
+},
+"EmployeeId": {
+"type": "integer",
+"format": "int64"
+},
+"MultiEmpId": {
+"type": "integer",
+"format": "int64"
+}
+},
+"additionalProperties": false
+},
+"GetTaskList": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+},
+"EmployeeId": {
+"type": "string",
+"nullable": true
+},
+"StatusType": {
+"type": "integer",
+"format": "int32"
+},
+"DueDate": {
+"type": "string",
+"format": "date-time"
+},
+"MultiEmpId": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"GetUserList": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+},
+"TaskId": {
+"type": "integer",
+"format": "int64"
+}
+},
+"additionalProperties": false
+},
+"GetWeekSchedule": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+},
+"SearchDate": {
+"type": "string",
+"format": "date-time"
+},
+"EmployeeId": {
+"type": "integer",
+"format": "int64"
+}
+},
+"additionalProperties": false
+},
+"InsertFeedBack": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+},
+"Comment": {
+"type": "string",
+"nullable": true
+},
+"EmailId": {
+"type": "string",
+"nullable": true
+},
+"FeedbackOptionId": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"InsertImage": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+},
+"TimeID": {
+"type": "integer",
+"format": "int32"
+},
+"IsClockIn": {
+"type": "boolean"
+},
+"InImage": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"InsertMessageModel": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+},
+"FromUserID": {
+"type": "integer",
+"format": "int64"
+},
+"ToUserID": {
+"type": "string",
+"nullable": true
+},
+"Subject": {
+"type": "string",
+"nullable": true
+},
+"ParentMobileNotificationID": {
+"type": "integer",
+"format": "int64"
+},
+"Notes": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"InsertTimeSheet": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+},
+"RequestID": {
+"type": "integer",
+"format": "int64"
+},
+"StartTime": {
+"type": "string",
+"format": "date-time"
+},
+"EndTime": {
+"type": "string",
+"format": "date-time"
+},
+"Type": {
+"type": "integer",
+"format": "int64"
+},
+"Reason": {
+"type": "string",
+"nullable": true
+},
+"DateRequested": {
+"type": "string",
+"format": "date-time"
+},
+"TimeId": {
+"type": "integer",
+"format": "int64"
+},
+"OfficeID": {
+"type": "integer",
+"format": "int64"
+},
+"PositionID": {
+"type": "integer",
+"format": "int64"
+},
+"CustomerId": {
+"type": "integer",
+"format": "int64"
+},
+"ServiceitemId": {
+"type": "integer",
+"format": "int64"
+},
+"ClassesId": {
+"type": "integer",
+"format": "int64"
+},
+"Billable": {
+"type": "boolean"
+},
+"VerifiedBy": {
+"type": "integer",
+"format": "int64"
+},
+"ManualBy": {
+"type": "integer",
+"format": "int64"
+},
+"RequestType": {
+"type": "integer",
+"format": "int32"
+},
+"Latitude": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"Longitude": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"Location": {
+"type": "string",
+"nullable": true
+},
+"IsClockIn": {
+"type": "integer",
+"format": "int32"
+},
+"Note": {
+"type": "string",
+"nullable": true
+},
+"EditTimeSheetRequest": {
+"type": "boolean"
+},
+"EmployeeId": {
+"type": "integer",
+"format": "int64"
+}
+},
+"additionalProperties": false
+},
+"InsertUpdateTask": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+},
+"TaskId": {
+"type": "integer",
+"format": "int32"
+},
+"TaskStatus": {
+"type": "integer",
+"format": "int32"
+},
+"TaskName": {
+"type": "string",
+"nullable": true
+},
+"EmployeeId": {
+"type": "string",
+"nullable": true
+},
+"DueDate": {
+"type": "string",
+"format": "date-time"
+},
+"AssignedDate": {
+"type": "string",
+"format": "date-time"
+},
+"Note": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"LoginModel": {
+"type": "object",
+"properties": {
+"Mobile_CheckLogin": {
+"$ref": "#/components/schemas/Mobile_CheckLoginModel"
+},
+"Mobile_CheckLoginUserDetails": {
+"$ref": "#/components/schemas/CheckLoginUserDetailsModel"
+},
+"Mobile_CheckLoginDashbordDetails": {
+"$ref": "#/components/schemas/CheckLoginDashbordDetailsModel"
+},
+"ApiTokenModel": {
+"$ref": "#/components/schemas/APITokenModel"
+},
+"TT_CheckResaller_SubDomains": {
+"$ref": "#/components/schemas/TT_CheckResaller_SubDomainsModel"
+}
+},
+"additionalProperties": false
+},
+"Logout": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"Mobile_CheckLoginModel": {
+"type": "object",
+"properties": {
+"Message": {
+"type": "string",
+"nullable": true
+},
+"Status": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"Mobile_GetSwitchSchedule_From": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+},
+"ShiftId": {
+"type": "integer",
+"format": "int64"
+},
+"Type": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"Mobile_GetSwitchSchedule_Other": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+},
+"ShiftId": {
+"type": "integer",
+"format": "int64"
+},
+"Type": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"Mobile_GetTimeSheetForEmployee": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+},
+"Employeexml": {
+"type": "string",
+"nullable": true
+},
+"OfficeId": {
+"type": "integer",
+"format": "int32"
+},
+"StartTime": {
+"type": "string",
+"format": "date-time"
+},
+"EndTime": {
+"type": "string",
+"format": "date-time"
+},
+"sortDirection": {
+"type": "string",
+"nullable": true
+},
+"PossibleError": {
+"type": "integer",
+"format": "int32"
+},
+"PageIndex": {
+"type": "integer",
+"format": "int32"
+},
+"PageSize": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"PayrollMail": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+},
+"Payroll_ID": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"PlanModel": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+},
+"PlanID": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"QuickClockIn": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+},
+"QuickClockInPIN": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"RemoveEmployeeFromTask": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+},
+"TaskAssignmentId": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"SendErrorMessage": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+},
+"Body": {
+"type": "string",
+"nullable": true
+},
+"AppVersion": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"SignupModel": {
+"type": "object",
+"properties": {
+"Email": {
+"type": "string",
+"nullable": true
+},
+"FullName": {
+"type": "string",
+"nullable": true
+},
+"CompanyName": {
+"type": "string",
+"nullable": true
+},
+"PartnerId": {
+"type": "string",
+"nullable": true
+},
+"DecryptPartnerId": {
+"type": "string",
+"nullable": true
+},
+"SignupQueryStringURL": {
+"type": "string",
+"nullable": true
+},
+"CultureLanguage": {
+"type": "string",
+"nullable": true
+},
+"strClient": {
+"type": "string",
+"nullable": true
+},
+"strLink": {
+"type": "string",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double"
+}
+},
+"additionalProperties": false
+},
+"TimeSheetRequest": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+},
+"StartDate": {
+"type": "string",
+"format": "date-time"
+},
+"EndDate": {
+"type": "string",
+"format": "date-time"
+},
+"EmployeeId": {
+"type": "integer",
+"format": "int64"
+},
+"PageStart": {
+"type": "integer",
+"format": "int32"
+},
+"DisplayLength": {
+"type": "integer",
+"format": "int32"
+},
+"IsApproved": {
+"type": "integer",
+"format": "int32"
+},
+"EmployeeIds": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"TT_CheckResaller_SubDomainsModel": {
+"type": "object",
+"properties": {
+"Message": {
+"type": "string",
+"nullable": true
+},
+"Status": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"Updatelonglat": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+},
+"TimeId": {
+"type": "integer",
+"format": "int64"
+},
+"IsClockin": {
+"type": "boolean"
+},
+"Longitude": {
+"type": "string",
+"nullable": true
+},
+"Latitude": {
+"type": "string",
+"nullable": true
+},
+"IsSaved": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"UpdateTaskEmployeeAssignment": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+},
+"TaskAssignmentId": {
+"type": "integer",
+"format": "int64"
+},
+"TaskId": {
+"type": "integer",
+"format": "int64"
+},
+"TaskStatus": {
+"type": "integer",
+"format": "int32"
+},
+"EmployeeId": {
+"type": "integer",
+"format": "int64"
+},
+"StartTask": {
+"type": "boolean"
+},
+"EndTask": {
+"type": "boolean"
+},
+"AssignedDate": {
+"type": "string",
+"format": "date-time"
+},
+"TaskdateTime": {
+"type": "string",
+"format": "date-time"
+}
+},
+"additionalProperties": false
+},
+"UserExpenseRequest": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+},
+"ManagerUserId": {
+"type": "integer",
+"format": "int64"
+},
+"OfficeId": {
+"type": "integer",
+"format": "int64"
+},
+"StartDate": {
+"type": "string",
+"format": "date-time"
+},
+"EndDate": {
+"type": "string",
+"format": "date-time"
+},
+"SearchUserID": {
+"type": "integer",
+"format": "int64"
+},
+"ReimburseTypeId": {
+"type": "integer",
+"format": "int64"
+},
+"Status": {
+"type": "integer",
+"format": "int32"
+},
+"AppVersion": {
+"type": "string",
+"nullable": true
+},
+"Employee_IDs": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"VerifyUnVerifyReimbursement": {
+"type": "object",
+"properties": {
+"SiteId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ClientId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UserId": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Version": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"DeviceID": {
+"type": "string",
+"nullable": true
+},
+"DeviceName": {
+"type": "string",
+"nullable": true
+},
+"DeviceVersion": {
+"type": "string",
+"nullable": true
+},
+"DeviceOs": {
+"type": "string",
+"nullable": true
+},
+"IP": {
+"type": "string",
+"nullable": true
+},
+"ExpenseId": {
+"type": "integer",
+"format": "int64"
+},
+"VerifiedBy": {
+"type": "integer",
+"format": "int64"
+},
+"Operation": {
+"type": "integer",
+"format": "int64"
+}
+},
+"additionalProperties": false
+}
+},
+"securitySchemes": {
+"Bearer": {
+"type": "apiKey",
+"description": "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
+"name": "Authorization",
+"in": "header"
+}
+}
+},
+"security": [
+{
+"Bearer": []
+}
+]
+}
